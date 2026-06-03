@@ -5,12 +5,15 @@ function showProjects(){
             <div id="back" onclick="Back()"><p>Back</p></div>
             <div id="info" onclick="showInfo()"><p>Info</p></div>
          </div>
-        <h1>Projects</h1>
+        <h1 id="title">Projects</h1>
         <p>Here you can find some of my projects.</p>
         <div id="Projects">
             <div id="Poject1">
                 <h1>Web Escape</h1>
                 <p>Web Escape is an interactive web escape room.<br> Your goal is to Escape a Compute System which trapped you</p>
+                <div id="TryButton">
+                    <a href="#" id="playButton">Play Now</a>
+                </div>
             </div>
         </div>
     </div>
@@ -21,8 +24,14 @@ function showInfo(){
     document.body.innerHTML = 
     `
     <div class="content">
+            <div id="nav">
+            <div id="back" onclick="Back()"><p>Back</p></div>
+            <div id="info" onclick="showInfo()"><p>Info</p></div>
+         </div>
         <h1>Info</h1>
-        <p>Here you can find some information about me.</p>
+         <h1 id="titleStart">Welcome to My Portfolio</h1>
+        <p class="textStart">Hello. My Name is Lukas I am from Austria and I am a passionate Web and Game Developer.</p>
+        <p class="textStart">Here u can find some of my Projects.</p>
     </div>
     `
 }
@@ -30,9 +39,26 @@ function showInfo(){
 function Back(){
     document.body.innerHTML = 
     `
-    <div id="nav">
+<div id="nav">
         <div id="projects" onclick="showProjects()"><p>Projects</p></div>
         <div id="info" onclick="showInfo()"><p>Info</p></div>
+    </div>
+    <br>
+    <div id="content">
+        <h1 id="titleStart">Welcome to My Portfolio</h1>
+        <p class="textStart">Hello. My Name is Lukas I am from Austria and I am a passionate Web and Game Developer.</p>
+        <p class="textStart">Here u can find some of my Projects.</p>
+        <div id="buttonInfo" onclick="showInfo()">Info</div>
+        <h1 id="titleProjects">My Projects</h1>
+        <div id="Projects">
+            <div id="Poject1">
+                <h1>Web Escape</h1>
+                <p>Web Escape is an interactive web escape room.<br> Your goal is to Escape a Compute System which trapped you</p>
+                <div id="TryButton">
+                    <a href="#" id="playButton">Play Now</a>
+                </div>
+            </div>
+    </div>
     </div>
     `
 }
