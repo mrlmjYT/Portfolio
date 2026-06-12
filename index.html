@@ -3,31 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Lukas Brunner | Portfolio</title>
+    <meta name="description" content="Portfolio of Lukas Brunner, a media technology student, web developer, game developer, and music creator from Austria.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
     <script src="script.js" defer></script>
-</head> 
+</head>
 <body>
-    <div id="nav">
-        <div id="projects" onclick="showProjects()"><p>Projects</p></div>
-        <div id="info" onclick="showInfo()"><p>Info</p></div>
-    </div>
-    <br>
-    <div id="content">
-        <h1 id="titleStart">Welcome to My Portfolio</h1>
-        <p class="textStart">Hello. My Name is Lukas I am from Austria and I am a passionate Web and Game Developer.</p>
-        <p class="textStart">Here u can find some of my Projects.</p>
-        <div id="buttonInfo" onclick="showInfo()">Info</div>
-        <h1 id="titleProjects">My Projects</h1>
-        <div id="Projects">
-            <div id="Poject1">
-                <h1>Web Escape</h1>
-                <p>Web Escape is an interactive web escape room.<br> Your goal is to Escape a Compute System which trapped you</p>
-                <div id="TryButton">
-                    <a href="#" id="playButton">Comming Soon</a>
+    <div class="cursor-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Go to home">
+            <span class="brand-mark">LB</span>
+            <span>Lukas Brunner</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#work">Work</a>
+            <a href="#music">Music</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero section" id="home">
+            <div class="hero-copy">
+                <p class="eyebrow">Media Technology Student · Web & Game Developer</p>
+                <h1>I build interactive digital experiences with code, sound, and game thinking.</h1>
+                <p class="hero-text">
+                    I am Lukas from Austria, focused on web experiences, game development, and creative technology.
+                    My work combines clean interfaces, playable ideas, and music-driven atmosphere.
+                </p>
+                <div class="hero-actions">
+                    <a class="button primary" href="#work">
+                        <i data-lucide="sparkles" aria-hidden="true"></i>
+                        View Work
+                    </a>
+                    <a class="button secondary" href="#music">
+                        <i data-lucide="music-2" aria-hidden="true"></i>
+                        Hear Music
+                    </a>
                 </div>
             </div>
-    </div>
-    </div>
+
+            <div class="hero-panel" aria-label="Portfolio highlights">
+                <div class="signal-line"></div>
+                <div class="status-grid">
+                    <div>
+                        <span>Focus</span>
+                        <strong>Interactive Web</strong>
+                    </div>
+                    <div>
+                        <span>Craft</span>
+                        <strong>Game Design</strong>
+                    </div>
+                    <div>
+                        <span>Sound</span>
+                        <strong>Original Music</strong>
+                    </div>
+                    <div>
+                        <span>Base</span>
+                        <strong>Austria</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section intro-strip" aria-label="Profile summary">
+            <p>
+                I like building things that feel alive: web apps with clear interaction, games with atmosphere,
+                and creative tools that invite people to explore.
+            </p>
+        </section>
+
+        <section class="section split" id="work">
+            <div class="section-heading">
+                <p class="eyebrow">Selected Work</p>
+                <h2>Projects with a playable edge.</h2>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="project-visual">
+                        <span class="screen-dot"></span>
+                        <span class="screen-dot"></span>
+                        <span class="screen-dot"></span>
+                        <div class="terminal-lines" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="tag">Game · Web</p>
+                        <h3>Web Escape</h3>
+                        <p>
+                            An interactive web escape room where the player has to escape from a computer system.
+                            Designed as a browser-first game concept with puzzles and atmosphere.
+                        </p>
+                        <a class="text-link" href="#contact">
+                            Coming Soon
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-visual project-visual-alt">
+                        <div class="level-map" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <p class="tag">Creative Tech</p>
+                        <h3>Portfolio System</h3>
+                        <p>
+                            A professional portfolio built around motion, responsive layout, project storytelling,
+                            and a dedicated music section.
+                        </p>
+                        <a class="text-link" href="#music">
+                            Explore Music
+                            <i data-lucide="arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section music-section" id="music">
+            <div class="section-heading">
+                <p class="eyebrow">Original Music</p>
+                <h2>Songs and releases.</h2>
+                <p>
+                    A compact music showcase with embedded YouTube players and direct links to the releases.
+                </p>
+            </div>
+
+            <div class="music-grid">
+                <article class="song-card">
+                    <iframe
+                        src="https://www.youtube.com/embed/p15cWwYq9wM?list=OLAK5uy_nOWnz8YVwPf-j8rztOtS542lMM83_1FNI"
+                        title="Replay by Mr.LMJ on YouTube"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="song-info">
+                        <span>Release 01</span>
+                        <h3>Replay</h3>
+                        <a class="text-link" href="https://www.youtube.com/watch?v=p15cWwYq9wM&list=OLAK5uy_nOWnz8YVwPf-j8rztOtS542lMM83_1FNI" target="_blank" rel="noopener">
+                            Open on YouTube
+                            <i data-lucide="external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="song-card">
+                    <iframe
+                        src="https://www.youtube.com/embed/aCKlt1nQtEE"
+                        title="Midnight Drift by Mr.LMJ on YouTube"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="song-info">
+                        <span>Release 02</span>
+                        <h3>Midnight Drift</h3>
+                        <a class="text-link" href="https://www.youtube.com/watch?v=aCKlt1nQtEE&list=OLAK5uy_kNgAbSrIPFRHUIYRf2" target="_blank" rel="noopener">
+                            Open on YouTube
+                            <i data-lucide="external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="song-card">
+                    <iframe
+                        src="https://www.youtube.com/embed/OZXc1lntz3Q?list=OLAK5uy_lDpaHBhJshuKqxVUU62Iei8aQjMuLMl8g"
+                        title="Final Ascent by Mr.LMJ on YouTube"
+                        loading="lazy"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                    <div class="song-info">
+                        <span>Release 03</span>
+                        <h3>Final Ascent</h3>
+                        <a class="text-link" href="https://www.youtube.com/watch?v=OZXc1lntz3Q&list=OLAK5uy_lDpaHBhJshuKqxVUU62Iei8aQjMuLMl8g" target="_blank" rel="noopener">
+                            Open on YouTube
+                            <i data-lucide="external-link" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="section-heading">
+                <p class="eyebrow">About</p>
+                <h2>Developer mindset, creative direction.</h2>
+            </div>
+            <div class="about-grid">
+                <p>
+                    I study media technology at a higher technical school and use my free time to develop projects,
+                    experiment with new tools, and learn better ways to build interactive systems.
+                </p>
+                <p>
+                    My strongest interests are programming, browser-based game experiences, design systems, and
+                    adding atmosphere through music and visual rhythm.
+                </p>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contact">
+            <p class="eyebrow">Contact</p>
+            <h2>Let us build something sharp.</h2>
+            <p>Use this portfolio as the central place for your projects, future links, releases, and contact details.</p>
+            <a class="button primary" href="https://www.youtube.com/channel/UCF0Wjh9D_nTyowQM8Cdnnnw" target="_blank" rel="noopener">
+                <i data-lucide="youtube" aria-hidden="true"></i>
+                YouTube Channel
+            </a>
+        </section>
+    </main>
 </body>
 </html>
